@@ -5,7 +5,7 @@ import ShowUserTask from '../ShowUserTask/ShowUserTask';
 const ToDoapps = () => {
     const [addTask,setAddTask]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/addtask')
+        fetch('https://fierce-anchorage-77877.herokuapp.com/addtask')
         .then(res=>res.json())
         .then(data=>setAddTask(data))
     },[addTask])
@@ -13,7 +13,7 @@ const ToDoapps = () => {
     const taskDelete = id =>{
         const proceed= window.confirm('are you sure');
         if(proceed){
-            fetch(`http://localhost:5000/addtaskDelete/${id}`,{
+            fetch(`https://fierce-anchorage-77877.herokuapp.com/addtaskDelete/${id}`,{
                 method:"DELETE"
             })
             .then(res=>res.json())
@@ -28,7 +28,7 @@ const ToDoapps = () => {
         const name = event.target.name.value;
         const description = event.target.description.value;
         const result={name,description}
-        fetch('http://localhost:5000/addtask',{
+        fetch('https://fierce-anchorage-77877.herokuapp.com/addtask',{
             method:"POST",
             headers:{
                 'content-type':'application/json'
