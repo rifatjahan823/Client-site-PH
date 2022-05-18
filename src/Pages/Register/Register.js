@@ -48,6 +48,7 @@ const navigate=useNavigate();
   }
     return (
         <div className='container'>
+        <div className='mx-auto form-container p-3 shadow m-4'>
         <Form onSubmit={registar}>
             <Form.Group controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
@@ -63,12 +64,13 @@ const navigate=useNavigate();
                 <Form.Control onBlur={handleConfirmPassword} type="password" placeholder="ConfirmPassword" required/>
             </Form.Group>
             <p style={{color:"red"}}>{error}</p>
-            <Button style={{backgroundColor:"#FF5400",border:'none'}} className='w-50 mx-auto d-block mb-2' variant="success" type="submit">
+            <Button style={{backgroundColor:"black",border:'none'}} className='w-50 mx-auto d-block mb-2' variant="success" type="submit">
                Register
             </Button>
         </Form>
         <p>Already have an account? <Link to="/login" className="text-danger pe-auto text-decoration-none">Please Login</Link></p>
 
+        </div>  
         </div>  
     );
 };

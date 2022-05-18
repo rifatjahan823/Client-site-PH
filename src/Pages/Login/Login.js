@@ -6,6 +6,7 @@ import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './Login.css'
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -49,8 +50,7 @@ if(sending){
   }
     return (
         <div className=' container '>
-            <div className='mx-auto form-container px-3'>
-   
+        <div className='mx-auto form-container p-3 shadow mt-4'>
         <Form onSubmit={submit}>
             <Form.Group  controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
@@ -71,7 +71,7 @@ if(sending){
             loading && <Loading></Loading>
             
         }
-            <Button style={{backgroundColor:"#FF5400",border:'none'}} className='w-50 mx-auto d-block mb-2' type="submit">
+            <Button style={{backgroundColor:"black",border:'none'}} className='w-50 mx-auto d-block mb-2' type="submit">
                 Login
             </Button>
         </Form>

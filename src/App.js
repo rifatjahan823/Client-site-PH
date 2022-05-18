@@ -5,10 +5,12 @@ import Home from './Pages/Home/Home';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
+import Header from './Pages/Header/Header';
 
 function App() {
   return (
     <div className="App">
+          <Header></Header>
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/todoapps" element={ <RequireAuth>

@@ -41,7 +41,7 @@ const ToDoapps = () => {
     }
     return (
         <>
-        <div className='mx-auto border mt-5 px-3 w-50'>
+        <div className='mx-auto form-container p-3 border shadow mt-4'>
       <Form onSubmit={onSubmit}>
       <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Name</Form.Label>

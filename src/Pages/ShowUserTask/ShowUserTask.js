@@ -1,31 +1,35 @@
 import React from 'react';
-import { NavItem } from 'react-bootstrap';
+import { toast, ToastContainer } from 'react-toastify';
 
 const ShowUserTask = ({task,taskDelete}) => {
     const {name,description,_id}=task;
 const success=()=>{
-    alert(`${name} ${description}`);
     if(success){
-     name.slice(0,2)
-     description.slice(0,2)
-    }
+        toast('success')
+       }
+    if (success.style.textDecoration) {
+        success.style.removeProperty('text-decoration');
+      } else {
+        success.style.setProperty('text-decoration', 'line-through');
+      }
 }
     return (
         <div className='card-group col-lg-12  '>
         <div className=' border w-100 text-center p-2 mb-3'>
         <div className='row justify-content-center align-items-center'>
-        <div className='col-3'>
+        <div className='col-lg-3 col-md-12 col-sm-12'>
             <p>{name}</p>
             <p>{description}</p>
         </div>
-        <div className='col-3'> 
+        <div className='col-lg-3 col-md-6 col-6'> 
             <button  className='btn btn-success me-5'  onClick={success}>complete</button>
         </div>
-        <div className='col-3'> 
+        <div className='col-lg-3 col-md-6 col-6'> 
             <button  className='btn btn-danger me-5'  onClick={()=>taskDelete(task._id)}>Delete</button>
         </div>
         </div>
         </div>
+        <ToastContainer></ToastContainer>
        </div>
        )
 };
