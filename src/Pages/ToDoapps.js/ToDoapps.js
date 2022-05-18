@@ -40,6 +40,7 @@ const ToDoapps = () => {
         })
     }
     return (
+        <>
         <div className='mx-auto border mt-5 px-3 w-50'>
       <Form onSubmit={onSubmit}>
       <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -55,15 +56,18 @@ const ToDoapps = () => {
         Add Task
      </Button>
     </Form>
+    </div>
+<div className='container mt-5'>
     {
-            
-         addTask.map(task=><ShowUserTask
-         task={task}
-         key={task._id}
-         taskDelete={taskDelete}>
-        </ShowUserTask>)
-    }
-       </div>
+                
+    addTask.map(task=><ShowUserTask
+    task={task}
+    key={task._id}
+    taskDelete={taskDelete}>
+    </ShowUserTask>)
+                }
+</div>
+    </>   
     );
 };
 
