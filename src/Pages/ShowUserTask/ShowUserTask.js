@@ -6,7 +6,7 @@ const ShowUserTask = ({task,taskDelete}) => {
     const [line,setLine]=useState(false)
 
    const success=()=>{
-        alert('success');
+        alert('successfully complete');
         setLine(true)
 }
 
